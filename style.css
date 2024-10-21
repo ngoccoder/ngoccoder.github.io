@@ -18,6 +18,7 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  padding: 50px 0px;
 }
 
 .night {
@@ -28,76 +29,19 @@ body {
   width: 100%;
   height: 100%;
   filter: blur(0.1vmin);
-  background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+}
+
+.happy-woman-day {
+  color: white;
+  font-size: 50px;
+  position: fixed;
+  top: 80px;
 }
 
 .flowers {
   position: relative;
   transform: scale(0.9);
 }
-
-.womens-day-message {
-    position: absolute; /* Định vị phần tử tuyệt đối */
-    top: 30%; /* Vị trí từ trên xuống */
-    left: 30%; /* Vị trí từ trái sang */
-    transform: translate(180px, -680%) scale(0); /* Di chuyển và thay đổi kích thước */
-    font-size: 4rem; /* Kích thước chữ */
-    font-weight: bold; /* Đậm chữ */
-    color: #ff78dd; /* Màu chữ */
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.7),
-        0 0 20px rgba(255, 255, 255, 0.5),
-        0 0 30px rgba(255, 255, 255, 0.3); /* Hiệu ứng phát sáng */
-    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
-    padding: 20px 40px; /* Khoảng cách bên trong */
-    border-radius: 20px; /* Bo góc */
-    z-index: 10; /* Độ ưu tiên hiển thị */
-    animation: appear 1s ease forwards, sparkle 5s infinite; /* Hiệu ứng hoạt hình */
-    animation-delay: 6s, 7s; /* Thời gian trễ hoạt hình */
-    
-    white-space: nowrap; /* Không ngắt dòng */
-    overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
-    text-overflow: ellipsis; /* Hiệu ứng dấu ba chấm khi tràn */
-    opacity: 0; /* Độ mờ ban đầu */
-    border: 2px solid #f5a9e2; /* Đường viền */
-    box-shadow: 0 0 20px rgba(248, 178, 230, 0.5); /* Đổ bóng */
-}
-
-.particle {
-    position: absolute; /* Định vị tuyệt đối cho các hạt bụi */
-    width: 10px; /* Kích thước hạt bụi */
-    height: 10px; /* Kích thước hạt bụi */
-    border-radius: 50%; /* Bo tròn */
-    background-color: rgba(252, 195, 227, 0.8); /* Màu sắc hạt bụi */
-    opacity: 0; /* Độ mờ ban đầu */
-}
-
-@keyframes appear {
-    0% {
-        transform: translate(180px, -680%) scale(0); /* Từ trạng thái ẩn */
-        opacity: 0; /* Độ mờ ban đầu */
-    }
-    100% {
-        transform: translate(180px, -680%) scale(1); /* Đến trạng thái hiện tại */
-        opacity: 1; /* Độ mờ cuối cùng */
-    }
-}
-
-@keyframes sparkle {
-    0%, 100% {
-        text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.7),
-            0 0 20px rgba(255, 255, 255, 0.5),
-            0 0 30px rgba(255, 255, 255, 0.3); /* Hiệu ứng phát sáng ban đầu và cuối cùng */
-    }
-    50% {
-        text-shadow: 
-            0 0 20px rgba(255, 255, 255, 1),
-            0 0 30px rgba(255, 255, 255, 0.8),
-            0 0 40px rgba(255, 255, 255, 0.5); /* Hiệu ứng phát sáng giữa các trạng thái */
-    }
-}
-
 
 .flower {
   position: absolute;
@@ -204,7 +148,7 @@ body {
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
   background-color: #a7ffee;
-  background-image: linear-gradient(to top, #ff78dd, #faace6);
+  background-image: linear-gradient(to top, #54b8aa, #a7ffee);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -224,7 +168,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #ff78dd, #faace6);
+  background-image: linear-gradient(to top, #39c6d6, #a7ffee);
   z-index: 1;
   opacity: 0.8;
 }
@@ -246,7 +190,7 @@ body {
   width: 60%;
   height: 60%;
   border-radius: inherit;
-  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0));
+  background-image: repeating-linear-gradient(300deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0));
 }
 .flower__line {
   height: 55vmin;
@@ -540,8 +484,7 @@ body {
   transform-origin: bottom center;
   background-image: linear-gradient(to top, transparent 30%, var(--c));
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-  -webkit-clip-path: polygon(35% 0, 65% 1%, 100% 100%, 0% 100%);
-          clip-path: polygon(35% 0, 65% 1%, 100% 100%, 0% 100%);
+  clip-path: polygon(35% 0, 65% 1%, 100% 100%, 0% 100%);
 }
 .flower__g-right {
   position: absolute;
@@ -1047,4 +990,6 @@ body {
 }
 .not-loaded * {
   animation-play-state: paused !important;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
